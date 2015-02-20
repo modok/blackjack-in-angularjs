@@ -19,7 +19,7 @@ describe('dealerService:', function() {
 		expect(target.giveCard() > 0).toBeTruthy();
 	});
 
-	it('should draw a random card with value between 1 and 10', function () {
+	it('should draw a random card with value between 1 and 11', function () {
 		var card = target.giveCard();
 		expect(card).toBeGreaterThan(0);
 		expect(card).toBeLessThan(12);
