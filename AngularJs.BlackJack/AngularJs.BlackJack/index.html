@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="blackjack">
+<head>
+	<title>Blackjack</title>
+	<script src="/scripts/jquery-2.1.3.min.js"></script>
+	<script src="/scripts/angular.min.js"></script>
+	<script src="/AppJs/v1.0/blackjack.min.js"></script>
+	<link href="icon.png" rel="icon" type="image/png" />
+	<link href="/Content/bootstrap.min.css" rel="stylesheet" />
+	<link href="Content/blackjack/blackjack.min.css" rel="stylesheet" />
+</head>
+<body data-ng-controller="boardController" class="container">
+	<div class="row dealer">
+		<div class="col-md-2 score">{{getDealerScore()}}</div>
+
+		<div class="col-md-10 cards">
+			<card type="card" data-ng-repeat="card in dealerCards track by $index"></card>
+		</div>
+	</div>
+	<div class="row buttons">
+		<div class="col-md-12" ng-if="!gameIsOver">
+			<button data-ng-click="getCard()" type="button" class="btn btn-danger">Card!</button> <button data-ng-click="pass()" type="button" class="btn btn-success">Pass!</button>
+
+		</div>
+		<div class="game-over" ng-if="gameIsOver">
+			<div class="text">{{getResultMessage()}}</div>
+			<button class="btn btn-default" ng-click="start()">Try again</button>
+		</div>
+
+	</div>
+	<div class="row player">
+		<div class="col-md-2 score">{{getPlayerScore()}}</div>
+		<div class="col-md-10 cards">
+			<card type="card" data-ng-repeat="card in playerCards track by $index"></card>
+		</div>
+	</div>
+</body>
+</html>
