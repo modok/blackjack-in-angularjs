@@ -148,7 +148,7 @@ describe('boardController', function () {
 
 	});
 
-	it('should win the dealer in case of tie', function () {
+	it('the dealer should win in case of tie', function () {
 		expect(scope.dealerScore).toEqual(0);
 		makeThePlayerWin();
 		expect(scope.gameIsOver).toBeFalsy();
