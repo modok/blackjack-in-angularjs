@@ -13,6 +13,7 @@
 		<file>/AppJs/v1.0/app/modules.js</file>
 		<file>/AppJs/v1.0/app/controllers/boardController.js</file>
 	<file>/AppJs/v1.0/app/directives/cardDirective.js</file>
+		<file>/AppJs/v1.0/app/models/deck.js</file>
 	<file>/AppJs/v1.0/app/services/dealerService.js</file>
   </files>
 </bundle>

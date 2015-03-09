@@ -18,7 +18,7 @@ describe('boardController', function () {
 			},
 			newTurn: function () {
 			},
-			getCards: function() {
+			getCards: function () {
 			}
 		};
 
@@ -148,7 +148,7 @@ describe('boardController', function () {
 
 	});
 
-	it('the dealer should win in case of tie', function () {
+	it('should win the dealer in case of tie', function () {
 		expect(scope.dealerScore).toEqual(0);
 		makeThePlayerWin();
 		expect(scope.gameIsOver).toBeFalsy();
@@ -160,12 +160,19 @@ describe('boardController', function () {
 
 	});
 
-	it('should be possible get a score when someone is busting', function() {
-		spyOnGetCards.and.returnValue([8, 8, 6]);
-		askForBust();
-		
+	it('should be possible get a score when someone is busting', function () {
+		spyOnGetCards.and.returnValue([
+			{ value: 8 },
+			{ value: 8 },
+			{ value: 6 },
+			{ value: 11 },
+			{ value: 12 },
+			{ value: 13 },
+			{ value: 1 }]);
 
-		expect(scope.getPlayerScore()).toEqual(22);
-		expect(scope.getDealerScore()).toEqual(22);
+		askForBust();
+
+		expect(scope.getPlayerScore()).toEqual(53);
+		expect(scope.getDealerScore()).toEqual(53);
 	});
 });

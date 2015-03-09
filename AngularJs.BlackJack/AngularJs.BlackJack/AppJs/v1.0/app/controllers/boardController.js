@@ -68,9 +68,17 @@
 			function calculateCardsValue(cards) {
 				var ret = 0;
 				for (var i = 0, l = cards.length; i < l; i++) {
-					ret += cards[i];
+					if (isFaceCard(cards[i].value)) {
+						ret += 10;
+					} else {
+						ret += cards[i].value;
+					}
 				}
 				return ret;
+			}
+
+			function isFaceCard(cardValue) {
+				return cardValue === 11 || cardValue === 12 || cardValue === 13;
 			}
 
 			function playTheDealer() {

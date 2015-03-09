@@ -14,7 +14,7 @@
 		<div class="col-md-2 score">{{getDealerScore()}}</div>
 
 		<div class="col-md-10 cards">
-			<card type="card" data-ng-repeat="card in dealerCards track by $index"></card>
+			<card value="card.value" seed="card.seed" data-ng-repeat="card in dealerCards track by $index"></card>
 		</div>
 	</div>
 	<div class="row buttons">
@@ -31,7 +31,7 @@
 	<div class="row player">
 		<div class="col-md-2 score">{{getPlayerScore()}}</div>
 		<div class="col-md-10 cards">
-			<card type="card" data-ng-repeat="card in playerCards track by $index"></card>
+			<card value="card.value" seed="card.seed" data-ng-repeat="card in playerCards track by $index"></card>
 		</div>
 	</div>
 </body>

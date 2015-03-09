@@ -57,6 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppJs\v1.0\app\models\deck.js" />
+    <Content Include="AppJs\v1.0\test\models\deckTest.js" />
+    <Content Include="AppJs\v1.0\test\_protractor\blackjackProtractor.js" />
+    <Content Include="AppJs\v1.0\test\_protractor\conf.js" />
+    <Content Include="Content\images\poker.cards.bypx.png" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -80,8 +85,12 @@
     <Content Include="AppJs\v1.0\test\controllers\boardControllerTest.js" />
     <Content Include="AppJs\v1.0\test\directives\cardDirectiveTest.js" />
     <Content Include="AppJs\v1.0\test\services\dealerServiceTest.js" />
-    <Content Include="Content\blackjack\blackjack.css" />
-    <Content Include="Content\blackjack\blackjack.min.css" />
+    <Content Include="Content\blackjack\blackjack.css">
+      <DependentUpon>blackjack.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\blackjack\blackjack.min.css">
+      <DependentUpon>blackjack.scss</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
